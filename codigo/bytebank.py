@@ -1,11 +1,11 @@
 from datetime import date
 
+
 class Funcionario:
     def __init__(self, nome, data_nascimento, salario):
         self._nome = nome
         self._data_nascimento = data_nascimento
         self._salario = salario
-
 
     @property
     def nome(self):
@@ -29,7 +29,6 @@ class Funcionario:
     def _eh_socio(self):
         sobrenomes = ['Bragança', 'Windsor', 'Bourdon', 'Yamato', 'Al Saud', 'Khan', 'Tudor', 'Ptolomeu']
         return self._salario >= 100000 and (self.sobrenome() in sobrenomes)
-
 
     def decrescimo_salario(self):
         if self._eh_socio():
